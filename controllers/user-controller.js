@@ -62,7 +62,10 @@ const userController = {
                 res.json(dbSocialMedia)
             })
             .catch(err => res.status(400).json(err));
-    }
+    },
+
+    // Add Friend
+    
 };
 
 module.exports = userController;
