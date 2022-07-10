@@ -4,7 +4,8 @@ const userController = {
     // gets all the users
     getAllUsers(req, res) {
         User.find({})
-        
+        .populate({path: "thoughts", select: "-__v"})
+
         .select('-__v') // removes `__v` from displaying
         .then(dbSocialMedia => res.json(dbSocialMedia))
         .catch(err => {

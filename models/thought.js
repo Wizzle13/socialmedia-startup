@@ -8,6 +8,7 @@ const ThoughtsSchema = new Schema(
             type: String,
             required: true,
             // set charater lenth between 1 - 280
+            match: [/.{1,280}/, 'Must be between 1 - 280 charaters']
         },
         createdAt: {
             type: Date,
